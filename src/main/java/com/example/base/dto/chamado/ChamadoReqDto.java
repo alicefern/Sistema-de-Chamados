@@ -1,4 +1,4 @@
-package com.example.base.dto.chamadoRequest;
+package com.example.base.dto.chamado;
 
 import com.example.base.model.CategoriaChamado;
 import com.example.base.model.PrioridadeChamado;

@@ -23,6 +23,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             case APIExceptionType.NOT_FOUND -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
             case APIExceptionType.BUSINESS_ERROR -> ResponseEntity.status(HttpStatus.UNPROCESSABLE_CONTENT).body(e.getMessage());
             case APIExceptionType.CONFLICT_ERROR ->  ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+            case APIExceptionType.FORBIDDEN -> ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
         };
     }
     //padrão RFC 7807

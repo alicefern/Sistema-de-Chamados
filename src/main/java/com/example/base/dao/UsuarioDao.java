@@ -14,5 +14,6 @@ import java.util.Optional;
 @Repository
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     Page<Usuario> findByPapel(String papel, Pageable page);
-    Usuario findByEmail(String email);
+    Optional<Usuario> findByEmail(String email);
+    Boolean existsByEmail(String email);
 }
